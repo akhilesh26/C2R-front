@@ -1,0 +1,42 @@
+{
+  
+  "name": "c2r-front",
+  "author": {
+    "name": "Akhilesh Kumar"
+  },
+  "private": true,
+  "keywords": [
+    "next.js",
+    "next",
+    "react",
+    "antd",
+    "ant-design",
+    "styled-components",
+    "custom",
+    "boilerplate"
+  ],
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "node .",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "antd": "^3.2.2",
+    "babel-plugin-import": "^1.6.5",
+    "babel-plugin-module-resolver": "^3.1.0",
+    "babel-plugin-wrap-in-js": "^1.1.1",
+    "express": "^4.16.3",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "next": "latest",
+    "raw-loader": "^0.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.1.6"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.5.0"
+  }
+}
