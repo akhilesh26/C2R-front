@@ -27,6 +27,8 @@ export default class MyDocument extends Document {
             type="images/x-icon"
             href="/static/favicon.ico"
           />
+
+          <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" />
           {this.props.styleTags}
           <style dangerouslySetInnerHTML={{ __html: styles }} />
 

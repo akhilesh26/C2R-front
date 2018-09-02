@@ -30,7 +30,9 @@ class Navbar extends Component {
         style={{borderBottom:'0px'}}
       >
         <Menu.Item key="home">
-          Home
+          <Link href='/' passHref> 
+              <a>Home</a>
+          </Link>
         </Menu.Item>
 
         <Menu.Item key="about" >
