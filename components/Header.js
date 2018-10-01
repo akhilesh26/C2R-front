@@ -21,6 +21,7 @@ const Title = styled.h1`
   font-family: ff-cocon-pro, sans-serif;
   font-style: italic;
   font-weight: 700;
+  margin-left: 5px;
 `;
 
 const MenuButtons =styled.div`
@@ -38,6 +39,7 @@ const MenuButtons =styled.div`
 `;
 
 const Logo = styled.a`
+	text-decoration: none;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -47,6 +49,7 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0;
 
   @media(max-width: 1020px) {
 	  flex-direction: column; 
