@@ -41,75 +41,41 @@ const Logo = styled.div`
 	align-items: center;
 `;
 
-const WithoutBurger = styled.div`
-	@media (max-width: 1050px) {
-		display: none;
-	}
-`;
-
-const WithBurger = styled.div`
-	display: none;
-	@media (max-width: 1050px) {
-		display: inline-block;
-	}
-`;
-
 export default ({ children }) => (
 	<Header>
-		<WithoutBurger>
-			<div className='ant-row'>
-				<div style={{display: 'flex', alignItems: 'center'}}>
-					<div className='ant-col-xs-24 ant-col-sm-24 ant-col-md-6' >
-						<div>
-							<Link href='/' passHref>
-								<a> 
-									<Logo >
-										<img 
-											style={{width:'60px'}} 
-											src='/static/img/c2r-logo.jpg' 
-											alt='c2r-logo'
-										/> 
-										<Title>Connect2Roots</Title>
-									</Logo>
-									
-								</a>
-							</Link>
-						</div>
+		<div className='ant-row'>
+			<div style={{display: 'flex', alignItems: 'center'}}>
+				<div>
+					<div>
+						<Link href='/' passHref>
+							<a> 
+								<Logo >
+									<img 
+										style={{width:'60px'}} 
+										src='/static/img/c2r-logo.jpg' 
+										alt='c2r-logo'
+									/> 
+									<Title>Connect2Roots</Title>
+								</Logo>
+								
+							</a>
+						</Link>
 					</div>
-
-					<div className='ant-col-xs-24 ant-col-sm-24 ant-col-md-18' >
-						<MenuButtons>
-							<div>
-								<Navbar />
-							</div>
-							
-							<div>
-								<Button style={{marginLeft:'10px'}}>Register</Button>
-								<Button style={{marginLeft:'10px'}}>Login</Button>
-							</div>
-						</MenuButtons>
-					</div>	
 				</div>
-			</div>
-		</WithoutBurger>
 
-		<WithBurger>
-			<div>
-				<Link href='/' passHref>
-					<a> 
-						<Logo >
-							<img 
-								style={{width:'60px'}} 
-								src='/static/img/c2r-logo.jpg' 
-								alt='c2r-logo'
-							/> 
-							<Title>Connect2Roots</Title>
-						</Logo>
+				<div>
+					<MenuButtons>
+						<div>
+							<Navbar />
+						</div>
 						
-					</a>
-				</Link>
+						<div>
+							<Button style={{marginLeft:'10px'}}>Register</Button>
+							<Button style={{marginLeft:'10px'}}>Login</Button>
+						</div>
+					</MenuButtons>
+				</div>	
 			</div>
-		</WithBurger>
-		
+		</div>
 	</Header>
 );
