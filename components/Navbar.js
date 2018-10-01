@@ -7,15 +7,16 @@ const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
 const DesktopMenu = styled.div`
-  @media(max-width: 768px) {
+  @media(max-width: 1020px) {
     display: none;
   }
 `
 
 const MobileMenu = styled.div`
-  display: block;
+  display: ${props => props.isOpen? "block": "none"};
+  width: 100%;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1020px) {
     display: none;
   }
 `
@@ -78,11 +79,17 @@ class Navbar extends Component {
             <Menu.Item key="gallery">
                 Photos Gallery
             </Menu.Item>
+            <Menu.Item style={{border: "2px solid #fa8c16", borderRadius: "5px", margin: "0 10px"}}>
+              Register
+            </Menu.Item>
+            <Menu.Item>
+                Login
+            </Menu.Item>
           </Menu>
         </DesktopMenu>
 
 
-        <MobileMenu>
+        <MobileMenu isOpen={this.props.isOpen}>
           <Menu
             onClick={this.handleClick}
             selectedKeys={[this.state.current]}
@@ -120,6 +127,12 @@ class Navbar extends Component {
 
             <Menu.Item key="gallery">
                 Photos Gallery
+            </Menu.Item>
+            <Menu.Item style={{border: "2px solid #fa8c16", borderRadius: "5px", margin: "10px 0", textAlign: "center"}}>
+              Register
+            </Menu.Item>
+            <Menu.Item style={{textAlign: "center"}}>
+                Login
             </Menu.Item>
           </Menu>
         </MobileMenu>

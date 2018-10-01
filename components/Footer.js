@@ -49,7 +49,7 @@ export default ({ children }) => (
 			</div>
 
 			<div className='ant-col-xs-24 ant-col-sm-8 ant-col-md-5'>
-				<h3>Carrier</h3>
+				<h3>Carrers</h3>
 			</div>
 
 			<div className='ant-col-xs-24 ant-col-sm-8 ant-col-md-5'>
