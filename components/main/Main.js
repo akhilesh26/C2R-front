@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Carousel from './Carousel';
 import ShortDetail from './ShortDetails';
+import { Fragment } from 'react';
+
 const BackgroundImage = styled.div`
     background: #adede3;
   
@@ -21,10 +23,10 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <Carousel />
         <ShortDetail />
-      </div>
+      </Fragment>
     );
   }
 }
