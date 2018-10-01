@@ -32,27 +32,19 @@ export default ({ children }) => (
 <Footer>
 	<div style={{padding: '3% 5%', borderBottom: '1px solid hsla(0,0%,100%,.25)'}}>
 		<div className='ant-row'>
-			<div className='ant-col-xs-24 ant-col-sm-8 ant-col-md-4' >
-				<Link href='/' passHref>
-					<a style={{margin: 'auto'}}>
-						<Logo src='/static/img/c2r-logo.jpg' alt='c2r-logo'/>
-					</a>
-				</Link>
-			</div>
-
-			<div className='ant-col-xs-24 ant-col-sm-8 ant-col-md-5'>
+			<div className='ant-col-xs-24 ant-col-sm-10 ant-col-md-6'>
 				<h3>Team</h3>
 			</div>
 
-			<div className='ant-col-xs-24 ant-col-sm-8 ant-col-md-5'>
+			<div className='ant-col-xs-24 ant-col-sm-10 ant-col-md-6'>
 				<h3>Contact Us</h3>
 			</div>
 
-			<div className='ant-col-xs-24 ant-col-sm-8 ant-col-md-5'>
+			<div className='ant-col-xs-24 ant-col-sm-10 ant-col-md-6'>
 				<h3>Carrers</h3>
 			</div>
 
-			<div className='ant-col-xs-24 ant-col-sm-8 ant-col-md-5'>
+			<div className='ant-col-xs-24 ant-col-sm-10 ant-col-md-6'>
 				<h3>Share</h3>
 			</div>
 		</div>
