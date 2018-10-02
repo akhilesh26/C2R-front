@@ -1,6 +1,8 @@
 import { Icon, Avatar, Badge, Button } from "antd";
 import styled from "styled-components";
 import Navbar from './Navbar';
+import Register from './Register';
+import Login from './Login';
 import Link from 'next/link';
 const Header = styled.div`
 
@@ -83,9 +85,9 @@ export default ({ children }) => (
 								<Navbar />
 							</div>
 							
-							<div>
-								<Button style={{marginLeft:'10px'}}>Register</Button>
-								<Button style={{marginLeft:'10px'}}>Login</Button>
+							<div style ={{display:'flex'}}>
+								<Register />
+								<Login />
 							</div>
 						</MenuButtons>
 					</div>	
