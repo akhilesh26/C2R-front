@@ -1,10 +1,13 @@
-import React, {Component} from 'react';
-
+import React, {Component, Fragment} from 'react';
 import { Form, Icon, Input, Button, Checkbox, Row } from 'antd';
 
 const FormItem = Form.Item;
 
-class LoginForm extends Component {
+class RegisterForm extends Component {
+  constructor(props){
+    super(props);
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -38,12 +41,9 @@ class LoginForm extends Component {
           <div style={{display:'flex', flexDirection: 'column'}}>
             
             <Button type="primary" htmlType="submit" className="login-form-button">
-              Log in
+              Register
             </Button>
 
-            <a className="login-form-forgot" href="">Forgot password</a>
-
-            <a href="">register now!</a>
           </div>
           
 
@@ -54,6 +54,6 @@ class LoginForm extends Component {
   }
 }
 
-const LoginFormWraped = Form.create()(LoginForm);
+const RegisterFormWraped = Form.create()(RegisterForm);
 
-export default LoginFormWraped;
+export default RegisterFormWraped;

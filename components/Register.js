@@ -1,57 +1,27 @@
+import React, {Component, Fragment} from 'react';
 import { Modal, Button } from 'antd';
 
-class Register extends React.Component {
+import RegisterForm from './forms/RegisterForm';
 
+class Register extends Component {
+  constructor(props){
+    super(props);
 
-  state = {
-    loading: false,
-    visible: false,
-  }
-
-  showModal = () => {
-    this.setState({
-      visible: true,
-    });
-  }
-
-  handleOk = () => {
-    this.setState({ loading: true });
-    setTimeout(() => {
-      this.setState({ loading: false, visible: false });
-    }, 3000);
-  }
-
-  handleCancel = () => {
-    this.setState({ visible: false });
   }
 
   render() {
-    const { visible, loading } = this.state;
     return (
-      <div>
-        <Button type="primary" onClick={this.showModal}>
-          Register
-        </Button>
+      <Fragment>
         <Modal
-          visible={visible}
-          title="Title"
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
+          visible={this.props.visibleRegister}
+          title="Register to Connect2Roots" 
+          onCancel={this.props.handleRegisterMenu}
           maskClosable={false}
-          footer={[
-            <Button key="back" onClick={this.handleCancel}>Return</Button>,
-            <Button key="submit" type="primary" loading={loading} onClick={this.handleOk}>
-              Submit
-            </Button>,
-          ]}
+          footer={false}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <RegisterForm />
         </Modal>
-      </div>
+      </Fragment>
     );
   }
 }

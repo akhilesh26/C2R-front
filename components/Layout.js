@@ -38,9 +38,6 @@ export default ({ children, title }) => (
       <title>{title}</title>
     </Head>
     <Header />
-    <Burger style={{position:'absolute', zIndex: '10', right: '0', top: '70px', background: 'red', width: '400px', height: '400px'}}>
-
-    </Burger>
     <Content> {children} </Content>
     <Footer />
   </Wrapper>

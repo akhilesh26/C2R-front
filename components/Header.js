@@ -1,117 +1,122 @@
+import React, { Component } from 'react'
 import { Icon, Avatar, Badge, Button } from "antd";
 import styled from "styled-components";
-import Navbar from './Navbar';
-import Register from './Register';
-import Login from './Login';
-import Link from 'next/link';
-const Header = styled.div`
 
+import Navbar from './Navbar';
+
+
+import Link from 'next/link';
+
+const Header = styled.div`
 	position:fixed;
 	z-index: 10;
 	background: #FFF;
 	box-shadow: 0 1px 4px 0 rgba(13,26,44,.23);
 	width: 100vw;
-	
- 
 `;
 
 const Title = styled.h1`
   color: #30120A;
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 0px;
   float: right;
   font-family: ff-cocon-pro, sans-serif;
   font-style: italic;
   font-weight: 700;
-  @media (max-width: 1100px) {
-	  font-size: 24px;
-  }
+  margin-left: 5px;
 `;
 
 const MenuButtons =styled.div`
-	
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-end;
 
+
+	@media(max-width: 1020px) {
+		width: 100%;
+		justify-content: center;
+	}
+
 `;
 
-const Logo = styled.div`
+const Logo = styled.a`
+	text-decoration: none;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 `;
 
-const WithoutBurger = styled.div`
-	@media (max-width: 1050px) {
-		display: none;
-	}
-`;
+const HeaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
 
-const WithBurger = styled.div`
+  @media(max-width: 1020px) {
+	  flex-direction: column; 
+	  justify-content: center;
+  }
+`
+
+const MobileMenuButton = styled.div`
 	display: none;
-	@media (max-width: 1050px) {
-		display: inline-block;
+	  
+	@media(max-width: 1020px) {
+		display: block;
 	}
-`;
+`
 
-export default ({ children }) => (
-	<Header>
-		<WithoutBurger>
-			<div className='ant-row'>
-				<div style={{display: 'flex', alignItems: 'center'}}>
-					<div className='ant-col-xs-24 ant-col-sm-24 ant-col-md-6' >
-						<div>
+const LinkWrapper = styled.div`
+	@media(max-width: 1020px) {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+`
+
+export default class extends Component  {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isOpen: false,
+		}
+	}
+
+	handleClick = () => {
+		this.setState({
+			isOpen: !this.state.isOpen,
+		})
+	}
+
+	render() {
+		
+		return (
+			<Header>
+				<div className='ant-row'>
+					<HeaderWrapper>
+						<LinkWrapper>
 							<Link href='/' passHref>
-								<a> 
-									<Logo >
+									<Logo>
 										<img 
 											style={{width:'60px'}} 
 											src='/static/img/c2r-logo.jpg' 
 											alt='c2r-logo'
 										/> 
 										<Title>Connect2Roots</Title>
-									</Logo>
-									
-								</a>
+									</Logo>		
 							</Link>
-						</div>
-					</div>
-
-					<div className='ant-col-xs-24 ant-col-sm-24 ant-col-md-18' >
+							<MobileMenuButton onClick={this.handleClick}>
+								<Icon type={this.state.isOpen? "close": "menu-fold"} theme="outlined" style={{fontSize: '28px'}}/>
+							</MobileMenuButton>
+						</LinkWrapper>
 						<MenuButtons>
-							<div>
-								<Navbar />
-							</div>
-							
-							<div style ={{display:'flex'}}>
-								<Register />
-								<Login />
-							</div>
+							<Navbar isOpen={this.state.isOpen}/>
 						</MenuButtons>
-					</div>	
+					</HeaderWrapper>
 				</div>
-			</div>
-		</WithoutBurger>
-
-		<WithBurger>
-			<div>
-				<Link href='/' passHref>
-					<a> 
-						<Logo >
-							<img 
-								style={{width:'60px'}} 
-								src='/static/img/c2r-logo.jpg' 
-								alt='c2r-logo'
-							/> 
-							<Title>Connect2Roots</Title>
-						</Logo>
-						
-					</a>
-				</Link>
-			</div>
-		</WithBurger>
-		
-	</Header>
-);
+			</Header>
+		)
+	}
+}
