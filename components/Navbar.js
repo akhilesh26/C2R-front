@@ -76,12 +76,19 @@ class Navbar extends Component {
               </Link>
             </Menu.Item>
 
-            <Menu.Item key="about" >
-              <Link href='/aboutc2r' passHref> 
-                <a>About C2R</a>
-              </Link>
-                
-            </Menu.Item>
+            <SubMenu key="about" title={<span>About Us<Icon type="caret-down" /></span>}>
+              
+              <Menu.Item key="1">Overview</Menu.Item>
+              <Menu.Item key="2">Vision & Mission</Menu.Item>
+              <Menu.Item key="3">C2R Team</Menu.Item>
+              <Menu.Item key="4">C2R Stories</Menu.Item>  
+              <Menu.Item key="5">C2R Working Model</Menu.Item>
+              <Menu.Item key="6">Reach & Presence</Menu.Item>
+              <Menu.Item key="7">Impact</Menu.Item>
+              <Menu.Item key="8">Champions Speak</Menu.Item>
+              <Menu.Item key="9">Our People</Menu.Item>
+
+            </SubMenu>
 
 
             <SubMenu key="projects" title={<span>C2R Projects <Icon type="caret-down" /></span>}>
@@ -100,7 +107,7 @@ class Navbar extends Component {
             </SubMenu>
 
             <Menu.Item key="gallery">
-                Photos Gallery
+              Gallery
             </Menu.Item>
             <Menu.Item onClick={this.handleRegisterMenu} style={{border: "2px solid #fa8c16", borderRadius: "5px", margin: "0 10px"}}>
               Register
@@ -125,12 +132,19 @@ class Navbar extends Component {
               </Link>
             </Menu.Item>
 
-            <Menu.Item key="about" >
-              <Link href='/aboutc2r' passHref> 
-                <a>About C2R</a>
-              </Link>
-                
-            </Menu.Item>
+            <SubMenu key="about" title={<span>About Us<Icon type="caret-down" /></span>}>
+              
+              <Menu.Item key="1">Overview</Menu.Item>
+              <Menu.Item key="2">Vision & Mission</Menu.Item>
+              <Menu.Item key="3">C2R Team</Menu.Item>
+              <Menu.Item key="4">C2R Stories</Menu.Item>  
+              <Menu.Item key="5">C2R Working Model</Menu.Item>
+              <Menu.Item key="6">Reach & Presence</Menu.Item>
+              <Menu.Item key="7">Impact</Menu.Item>
+              <Menu.Item key="8">Champions Speak</Menu.Item>
+              <Menu.Item key="9">Our People</Menu.Item>
+
+            </SubMenu>
 
 
             <SubMenu key="projects" title={<span>C2R Projects <Icon type="caret-down" /></span>}>
@@ -149,7 +163,7 @@ class Navbar extends Component {
             </SubMenu>
 
             <Menu.Item key="gallery">
-                Photos Gallery
+                Gallery
             </Menu.Item>
             <Menu.Item onClick={this.handleRegisterMenu} style={{border: "2px solid #fa8c16", borderRadius: "5px", margin: "10px 0", textAlign: "center"}}>
               Register
