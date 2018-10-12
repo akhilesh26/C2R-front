@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 
 const Content = styled.div`
   align-items: center;
-  margin-top: 70px;
+  margin-top: 100px;
 `;
 
 const Burger = styled.div`

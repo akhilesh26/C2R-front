@@ -78,37 +78,55 @@ class Navbar extends Component {
 
             <SubMenu key="about" title={<span>About Us<Icon type="caret-down" /></span>}>
               
-              <Menu.Item key="1">Overview</Menu.Item>
-              <Menu.Item key="2">Vision & Mission</Menu.Item>
-              <Menu.Item key="3">C2R Team</Menu.Item>
-              <Menu.Item key="4">C2R Stories</Menu.Item>  
-              <Menu.Item key="5">C2R Working Model</Menu.Item>
-              <Menu.Item key="6">Reach & Presence</Menu.Item>
-              <Menu.Item key="7">Impact</Menu.Item>
-              <Menu.Item key="8">Champions Speak</Menu.Item>
-              <Menu.Item key="9">Our People</Menu.Item>
-
-            </SubMenu>
-
-
-            <SubMenu key="projects" title={<span>C2R Projects <Icon type="caret-down" /></span>}>
+              <Menu.Item key="about1">
+                <Link href='/about/overview' passHref>
+                  <a>Overview</a>
+                </Link>
+              </Menu.Item>
               
-                <Menu.Item key="setting:1">Completed</Menu.Item>
-                <Menu.Item key="setting:2">Ongoing</Menu.Item>
-                <Menu.Item key="setting:3">Project-general</Menu.Item>   
+              <Menu.Item key="about2">Vision & Mission</Menu.Item>
+
+              <Menu.Item key="about3">
+                <Link href='/about/team' passHref>
+                  <a>C2R Team</a>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="about4">C2R Stories</Menu.Item>  
+              <Menu.Item key="about5">C2R Working Model</Menu.Item>
+              <Menu.Item key="about6">Reach & Presence</Menu.Item>
+              <Menu.Item key="about7">Impact</Menu.Item>
+              <Menu.Item key="about8">Champions Speak</Menu.Item>
+              <Menu.Item key="about9">Our People</Menu.Item>
             </SubMenu>
             
-            <SubMenu key="aop" title={<span>Areas of Operation <Icon type="caret-down" /></span>}>
+            <SubMenu key="aop" title={<span>OUR WORK<Icon type="caret-down" /></span>}>
               
                 <Menu.Item key="aop:1">Education</Menu.Item>
                 <Menu.Item key="aop:2">Skill Development</Menu.Item>
                 <Menu.Item key="aop:3">Helth</Menu.Item>
-                <Menu.Item key="aop:4">Agriculture</Menu.Item>    
+                <Menu.Item key="aop:4">Women Impowerment</Menu.Item>    
             </SubMenu>
 
-            <Menu.Item key="gallery">
-              Gallery
-            </Menu.Item>
+            <SubMenu key="getInvalve" title={<span>Get Invalved<Icon type="caret-down" /></span>}>
+
+                <SubMenu key="getInvalve1" title="Individual Support">
+                  <Menu.Item key="1">Donate</Menu.Item>
+                  <Menu.Item key="2">Valunteer</Menu.Item>
+                </SubMenu>
+                <SubMenu key="getInvalve2" title="Corporate Partnerships">
+                  <Menu.Item key="3">Donate</Menu.Item>
+                  <Menu.Item key="4">Campaigns</Menu.Item>
+                </SubMenu>
+                <SubMenu key="getInvalve3" title="Institutional Alliances">
+                  <Menu.Item key="5">NGOs</Menu.Item>
+                  <Menu.Item key="6">School</Menu.Item>
+                  <Menu.Item key="7">College</Menu.Item>
+                </SubMenu>
+                
+                <Menu.Item key="getInvalve4">Faq</Menu.Item>    
+                
+            </SubMenu>
+
             <Menu.Item onClick={this.handleRegisterMenu} style={{border: "2px solid #fa8c16", borderRadius: "5px", margin: "0 10px"}}>
               Register
             </Menu.Item>
@@ -133,38 +151,46 @@ class Navbar extends Component {
             </Menu.Item>
 
             <SubMenu key="about" title={<span>About Us<Icon type="caret-down" /></span>}>
-              
-              <Menu.Item key="1">Overview</Menu.Item>
-              <Menu.Item key="2">Vision & Mission</Menu.Item>
-              <Menu.Item key="3">C2R Team</Menu.Item>
-              <Menu.Item key="4">C2R Stories</Menu.Item>  
-              <Menu.Item key="5">C2R Working Model</Menu.Item>
-              <Menu.Item key="6">Reach & Presence</Menu.Item>
-              <Menu.Item key="7">Impact</Menu.Item>
-              <Menu.Item key="8">Champions Speak</Menu.Item>
-              <Menu.Item key="9">Our People</Menu.Item>
-
+              <Menu.Item key="about1">
+                <Link href='/about/overview' passHref>
+                  <a>Overview</a>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="about2">Vision & Mission</Menu.Item>
+              <Menu.Item key="about3">C2R Team</Menu.Item>
+              <Menu.Item key="about4">C2R Stories</Menu.Item>  
+              <Menu.Item key="about5">C2R Working Model</Menu.Item>
+              <Menu.Item key="about6">Reach & Presence</Menu.Item>
+              <Menu.Item key="about7">Impact</Menu.Item>
+              <Menu.Item key="about8">Champions Speak</Menu.Item>
+              <Menu.Item key="about9">Our People</Menu.Item>
             </SubMenu>
 
 
-            <SubMenu key="projects" title={<span>C2R Projects <Icon type="caret-down" /></span>}>
-              
-                <Menu.Item key="setting:1">Completed</Menu.Item>
-                <Menu.Item key="setting:2">Ongoing</Menu.Item>
-                <Menu.Item key="setting:3">Project-general</Menu.Item>   
-            </SubMenu>
-            
-            <SubMenu key="aop" title={<span>Areas of Operation <Icon type="caret-down" /></span>}>
-              
+            <SubMenu key="aop" title={<span>OUR WORK<Icon type="caret-down" /></span>}>
                 <Menu.Item key="aop:1">Education</Menu.Item>
                 <Menu.Item key="aop:2">Skill Development</Menu.Item>
                 <Menu.Item key="aop:3">Helth</Menu.Item>
-                <Menu.Item key="aop:4">Agriculture</Menu.Item>    
+                <Menu.Item key="aop:4">Women Impowerment</Menu.Item>    
             </SubMenu>
 
-            <Menu.Item key="gallery">
-                Gallery
-            </Menu.Item>
+            <SubMenu key="getInvalve" title={<span>Get Invalved<Icon type="caret-down" /></span>}>
+                <SubMenu key="getInvalve1" title="Individual Support">
+                  <Menu.Item key="1">Donate</Menu.Item>
+                  <Menu.Item key="2">Valunteer</Menu.Item>
+                </SubMenu>
+                <SubMenu key="getInvalve2" title="Corporate Partnerships">
+                  <Menu.Item key="3">Donate</Menu.Item>
+                  <Menu.Item key="4">Campaigns</Menu.Item>
+                </SubMenu>
+                <SubMenu key="getInvalve3" title="Institutional Alliances">
+                  <Menu.Item key="5">NGOs</Menu.Item>
+                  <Menu.Item key="6">School</Menu.Item>
+                  <Menu.Item key="7">College</Menu.Item>
+                </SubMenu>
+                
+                <Menu.Item key="getInvalve4">Faq</Menu.Item>       
+            </SubMenu>
             <Menu.Item onClick={this.handleRegisterMenu} style={{border: "2px solid #fa8c16", borderRadius: "5px", margin: "10px 0", textAlign: "center"}}>
               Register
             </Menu.Item>
